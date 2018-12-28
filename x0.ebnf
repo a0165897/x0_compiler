@@ -1,0 +1,28 @@
+program = "main" "{" declaration_list statement_list "}".
+declaration_list = [declaration_list declaration_stat | declaration_stat]  .
+declaration_stat = type ID ";" | type ID "[" NUM "]" ";".
+type = "int" | "char".
+var = ID | ID "[" expression "]".
+statement_list = statement_list statement.
+statement = if_stat | while_stat | read_stat | write_stat | compound_stat | expression_stat.
+if_stat = "if" "(" expression ")" statement [ "else" statement].
+while_stat = "while" "(" expression ")" statement .
+write_stat = "write" expression ";" .
+read_stat = "read" var ";".
+compound_stat = "{" statement_list "}".
+expression_stat = expression ";" | ";".
+expression = var "=" expression | simple_expr.
+simple_expr = additive_expr | additive_expr (">" | "<" | ">=" | "<=" | "==" | "!=" ) additive_expr.
+additive_expr = term {("+"|"-") term }.
+term = factor {("*"|"/") factor }.
+factor = "(" expression ")"| var | NUM.
+for(){}
+function ID {}
+array[][]
+bool & ! |
+const
+loop
+call
+...
+
+

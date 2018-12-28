@@ -1,0 +1,1 @@
+@del *.exe *.o lex.yy.c xoc.tab.c xoc.tab.h 
